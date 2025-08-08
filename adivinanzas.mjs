@@ -8,13 +8,12 @@ async function juegoAdivinanza() {
     let intento = 0;
     let adivino = false;
 
-    console.log(" Bienvenido al juego de adivinanzas de letras ");
-    console.log("Tienes 15 intentos para adivinar la letra.");
-    console.log("Se distingue entre mayúsculas y minúsculas.");
-    console.log("No se consideran la 'll' ni la 'ñ'.\n");
+    console.log(" ADIVINA ");
+    console.log("Tenes 15 intentos para adivinar la letra.");
+  
 
     while (intento < intentosMaximos && !adivino) {
-        let letraUsuario = await input(`Intento ${intento + 1}: Ingresa una letra → `);
+        let letraUsuario = await input(`Intento ${intento + 1}: Ingresa una letra `);
 
         if (letraUsuario.length !== 1 || !letrasPermitidas.includes(letraUsuario)) {
             console.log(" Entrada inválida. Ingresa solo una letra permitida.");
@@ -27,7 +26,7 @@ async function juegoAdivinanza() {
             adivino = true;
             break;
         } else {
-            console.log(" No es la letra, intenta otra vez.");
+            console.log(" No es la letra flaco.");
         }
     }
 
@@ -35,7 +34,7 @@ async function juegoAdivinanza() {
 
     console.log("\n Resultado:");
     if (adivino) {
-        console.log(` ¡Correcto! La letra era '${letraSecreta}'.`);
+        console.log(` BIEN AHIII La letra era '${letraSecreta}'.`);
         console.log(` Puntaje: ${puntaje}`);
 
         if (puntaje >= 80) console.log(" Adivinador Nato");
