@@ -42,7 +42,7 @@ async function juegoAdivinanza() {
         else if (puntaje >= 40) console.log(" Adivinador Novato");
         else if (puntaje >= 1) console.log(" Adivinador Amateur");
     } else {
-        console.log(` No lograste adivinar. La letra era '${letraSecreta}'.`);
+        console.log(` mal ay no adivinaste. La letra era '${letraSecreta}'.`);
         console.log(" Puntaje: 0");
     }
 }
