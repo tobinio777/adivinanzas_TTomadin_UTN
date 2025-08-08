@@ -15,12 +15,7 @@ async function juegoAdivinanza() {
     while (intento < intentosMaximos && !adivino) {
         let letraUsuario = await input(`Intento ${intento + 1}: Ingresa una letra `);
 
-        if (letraUsuario.length !== 1 || !letrasPermitidas.includes(letraUsuario)) {
-            console.log(" Entrada inválida. Ingresa solo una letra permitida.");
-            continue;
-        }
-
-        intento++;
+       
 
         if (letraUsuario === letraSecreta) {
             adivino = true;
